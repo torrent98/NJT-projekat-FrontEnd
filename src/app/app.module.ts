@@ -34,6 +34,9 @@ import { ForbiddenComponent } from './forbidden/forbidden.component';
 
 import { AddNewProductComponent } from './add-new-product/add-new-product.component';
 import { DragDirective } from './drag.directive';
+import { ShowProductImagesDialogComponent } from './show-product-images-dialog/show-product-images-dialog.component';
+import { ShowProductDetailsComponent } from './show-product-details/show-product-details.component';
+import { ProductViewDetailsComponent } from './product-view-details/product-view-details.component';
 
 
 @NgModule({
@@ -47,7 +50,10 @@ import { DragDirective } from './drag.directive';
     ForbiddenComponent,
     AdminComponent,
     AddNewProductComponent,
-    DragDirective
+    DragDirective,
+    ShowProductImagesDialogComponent,
+    ShowProductDetailsComponent,
+    ProductViewDetailsComponent
   ],
   imports: [
     BrowserModule,
