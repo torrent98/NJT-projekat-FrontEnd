@@ -9,6 +9,8 @@ import { UserComponent } from "./user/user.component";
 import { AuthGuard } from "./_auth/auth.guard";
 
 import { HomeComponent } from "./home/home.component";
+import { AddNewProductComponent } from './add-new-product/add-new-product.component';
+import { ProductResolveService } from './product-resolve.service';
 
 const routes: Routes = [
 
@@ -44,6 +46,16 @@ const routes: Routes = [
   {
     path: "register",
     component: RegisterComponent
+  },
+
+  {
+    path: "addNewProduct",
+    component: AddNewProductComponent,
+    canActivate: [AuthGuard],
+    data: { roles: ["Admin"] },
+    resolve: {
+      product: ProductResolveService,
+    },
   }
 
 ];

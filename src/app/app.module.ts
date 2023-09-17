@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-
+import { AdminComponent } from './admin/admin.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthGuard } from './_auth/auth.guard';
 import { AuthInterceptor } from './_auth/auth.interceptor';
@@ -31,8 +31,9 @@ import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
-import { AdminComponent } from './admin/admin.component';
 
+import { AddNewProductComponent } from './add-new-product/add-new-product.component';
+import { DragDirective } from './drag.directive';
 
 
 @NgModule({
@@ -44,7 +45,9 @@ import { AdminComponent } from './admin/admin.component';
     LoginComponent,
     HomeComponent,
     ForbiddenComponent,
-    AdminComponent
+    AdminComponent,
+    AddNewProductComponent,
+    DragDirective
   ],
   imports: [
     BrowserModule,
