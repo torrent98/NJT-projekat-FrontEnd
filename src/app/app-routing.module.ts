@@ -13,6 +13,7 @@ import { AddNewProductComponent } from './add-new-product/add-new-product.compon
 import { ProductResolveService } from './product-resolve.service';
 import { ShowProductDetailsComponent } from './show-product-details/show-product-details.component';
 import { ProductViewDetailsComponent } from './product-view-details/product-view-details.component';
+import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
 
@@ -71,6 +72,13 @@ const routes: Routes = [
     path: "productViewDetails",
     component: ProductViewDetailsComponent,
     resolve: { product: ProductResolveService },
+  },
+
+  {
+    path: "cart",
+    component: CartComponent,
+    canActivate: [AuthGuard],
+    data: { roles: ["User"] }
   }
 
 ];

@@ -37,6 +37,7 @@ import { DragDirective } from './drag.directive';
 import { ShowProductImagesDialogComponent } from './show-product-images-dialog/show-product-images-dialog.component';
 import { ShowProductDetailsComponent } from './show-product-details/show-product-details.component';
 import { ProductViewDetailsComponent } from './product-view-details/product-view-details.component';
+import { CartComponent } from './cart/cart.component';
 
 
 @NgModule({
@@ -53,7 +54,8 @@ import { ProductViewDetailsComponent } from './product-view-details/product-view
     DragDirective,
     ShowProductImagesDialogComponent,
     ShowProductDetailsComponent,
-    ProductViewDetailsComponent
+    ProductViewDetailsComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
