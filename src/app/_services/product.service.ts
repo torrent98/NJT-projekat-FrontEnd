@@ -12,7 +12,7 @@ export class ProductService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public createTransaction(amount: string) {
+  public createTransaction(amount: number) {
     return this.httpClient.get("http://localhost:8080/createTransaction/"+amount);
   }
 

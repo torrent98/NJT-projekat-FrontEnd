@@ -14,6 +14,11 @@ import { ProductResolveService } from './product-resolve.service';
 import { ShowProductDetailsComponent } from './show-product-details/show-product-details.component';
 import { ProductViewDetailsComponent } from './product-view-details/product-view-details.component';
 import { CartComponent } from './cart/cart.component';
+import { MyOrdersComponent } from './my-orders/my-orders.component';
+import { OrderDetailsComponent } from './order-details/order-details.component';
+import { OrderConfirmationComponent } from './order-confirmation/order-confirmation.component';
+import { BuyProductComponent } from './buy-product/buy-product.component';
+import { BuyProductResolverService } from './buy-product-resolver.service';
 
 const routes: Routes = [
 
@@ -79,6 +84,37 @@ const routes: Routes = [
     component: CartComponent,
     canActivate: [AuthGuard],
     data: { roles: ["User"] }
+  },
+
+  {
+    path:"myOrders",
+    component: MyOrdersComponent,
+    canActivate: [AuthGuard],
+    data: { roles: ["User"] }
+  },
+
+  {
+    path: "orderInformation",
+    component: OrderDetailsComponent,
+    canActivate: [AuthGuard],
+    data: { roles: ["Admin"] },
+  },
+
+  {
+    path:"orderConfirm",
+    component: OrderConfirmationComponent,
+    canActivate: [AuthGuard],
+    data: { roles: ["User"] }
+  },
+
+  {
+    path: "buyProduct",
+    component: BuyProductComponent,
+    canActivate: [AuthGuard],
+    data: { roles: ["User"] },
+    resolve: {
+      productDetails: BuyProductResolverService,
+    },
   }
 
 ];

@@ -38,6 +38,10 @@ import { ShowProductImagesDialogComponent } from './show-product-images-dialog/s
 import { ShowProductDetailsComponent } from './show-product-details/show-product-details.component';
 import { ProductViewDetailsComponent } from './product-view-details/product-view-details.component';
 import { CartComponent } from './cart/cart.component';
+import { MyOrdersComponent } from './my-orders/my-orders.component';
+import { OrderDetailsComponent } from './order-details/order-details.component';
+import { OrderConfirmationComponent } from './order-confirmation/order-confirmation.component';
+import { BuyProductComponent } from './buy-product/buy-product.component';
 
 
 @NgModule({
@@ -55,7 +59,11 @@ import { CartComponent } from './cart/cart.component';
     ShowProductImagesDialogComponent,
     ShowProductDetailsComponent,
     ProductViewDetailsComponent,
-    CartComponent
+    CartComponent,
+    MyOrdersComponent,
+    OrderDetailsComponent,
+    OrderConfirmationComponent,
+    BuyProductComponent
   ],
   imports: [
     BrowserModule,
